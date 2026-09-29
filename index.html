@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camions B & B Inc — Servicio de Camiones y Mecánica</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        :root {
+            --azul: #0B53A6;
+            --rojo: #E63946;
+            --gris-oscuro: #1D3557;
+            --gris-claro: #F1FAEE;
+        }
+        body { line-height: 1.6; color: #333; }
+        header { background: linear-gradient(135deg, var(--azul), #0a478f); color: white; padding: 1rem 5%; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 0.8rem; font-size: 1.5rem; font-weight: bold; }
+        .logo img { height: 50px; }
+        nav a { color: white; text-decoration: none; margin-left: 1.5rem; font-weight: 500; transition: opacity 0.3s; }
+        nav a:hover { opacity: 0.8; }
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.imgur.com/placeholder-truck.jpg'); background-size: cover; background-position: center; min-height: 80vh; display: flex; align-items: center; text-align: center; color: white; padding: 2rem 5%; }
+        .hero-content { max-width: 800px; margin: 0 auto; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.3rem; margin-bottom: 2rem; }
+        .btn { display: inline-block; padding: 0.9rem 2rem; border-radius: 5px; text-decoration: none; font-weight: bold; transition: transform 0.3s; }
+        .btn-rojo { background: var(--rojo); color: white; margin-right: 1rem; }
+        .btn-azul { background: white; color: var(--azul); }
+        .btn:hover { transform: translateY(-3px); }
+        section { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
+        h2 { text-align: center; font-size: 2.2rem; margin-bottom: 3rem; color: var(--gris-oscuro); }
+        .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .servicio { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--azul); transition: transform 0.3s; }
+        .servicio:hover { transform: translateY(-5px); }
+        .servicio h3 { color: var(--azul); margin-bottom: 1rem; font-size: 1.3rem; }
+        .galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+        .galeria img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s; }
+        .galeria img:hover { transform: scale(1.03); }
+        .contacto { background: var(--gris-claro); }
+        .contacto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .info h3 { color: var(--azul); margin-bottom: 0.5rem; }
+        .numero { font-size: 1.4rem; font-weight: bold; color: var(--rojo); }
+        footer { background: var(--gris-oscuro); color: white; text-align: center; padding: 2rem; margin-top: 2rem; }
+        .destacado { color: var(--rojo); font-weight: bold; }
+        @media(max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 1rem; }
+            nav a { margin: 0 0.7rem; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Encabezado -->
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <span>🚛 Camions B & B Inc</span>
+        </div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#galeria">Trabajos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Portada Principal -->
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <h1>Camions B & B Inc</h1>
+        <p>Mecánica Especializada • Servicio de Carretera • Venta de Camiones y Repuestos</p>
+        <p class="destacado">📍 Sortie 256, Villeroy (QC) — G0S 3K0</p>
+        <br>
+        <a href="tel:+14384009568" class="btn btn-rojo">📞 438-400-9568</a>
+        <a href="#contacto" class="btn btn-azul">Solicitar Servicio</a>
+    </div>
+</section>
+
+<!-- Servicios -->
+<section id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="servicios-grid">
+        <div class="servicio">
+            <h3>🔧 Mecánica General</h3>
+            <p>Mantenimiento preventivo y correctivo. Reparación completa de motores, transmisiones y diferenciales.</p>
+        </div>
+        <div class="servicio">
+            <h3>🚛 Servicio de Carretera 24/7</h3>
+            <p>Asistencia en ruta para camiones pesados. Cambio de neumáticos, reparaciones rápidas y remolque.</p>
+        </div>
+        <div class="servicio">
+            <h3>⛽ Motores Diésel</h3>
+            <p>Especialistas en motores diésel. Cambios de aceite, diagnóstico computarizado y reparación de componentes.</p>
+        </div>
+        <div class="servicio">
+            <h3>🛞 Venta y Reparación de Neumáticos</h3>
+            <p>Reparación de pinchazos, venta de neumáticos nuevos y usados para todo tipo de vehículos pesados.</p>
+        </div>
+        <div class="servicio">
+            <h3>📦 Compra y Venta de Camiones</h3>
+            <p>Comercialización de camiones, repuestos y piezas. Asesoría completa en compra-venta.</p>
+        </div>
+        <div class="servicio">
+            <h3>⚙️ Mantenimiento Preventivo</h3>
+            <p>Planes de mantenimiento para flotas. Inspecciones periódicas para evitar paradas inesperadas.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Galería -->
+<section id="galeria" style="background: var(--gris-claro);">
+    <h2>Nuestro Trabajo</h2>
+    <p style="text-align:center; margin-bottom:2rem; font-size:1.1rem;">Equipo listo para atenderte donde estés</p>
+    <div class="galeria">
+        <img src="https://i.imgur.com/truck1.jpg" alt="Camión azul Freightliner en carretera">
+        <img src="https://i.imgur.com/truck2.jpg" alt="Camión Volvo blanco con remolque">
+        <img src="https://i.imgur.com/truck3.jpg" alt="Pickup Ford con remolque de servicio">
+        <img src="https://i.imgur.com/truck4.jpg" alt="Remolque de servicio Camions B&B">
+        <img src="https://i.imgur.com/truck5.jpg" alt="Servicio mecánico en carretera">
+        <img src="https://i.imgur.com/truck6.jpg" alt="Camiones B&B Villeroy QC">
+    </div>
+</section>
+
+<!-- Contacto -->
+<section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <div class="contacto-grid">
+        <div class="info">
+            <h3>📍 Dirección</h3>
+            <p>Sortie 256, Villeroy<br>Québec, Canadá<br>G0S 3K0</p>
+        </div>
+        <div class="info">
+            <h3>📞 Teléfonos</h3>
+            <p class="numero">438-400-9568</p>
+            <p class="numero">514-448-0113</p>
+        </div>
+        <div class="info">
+            <h3>✉️ Correo</h3>
+            <p>stalynmojica@gmail.com</p>
+        </div>
+        <div class="info">
+            <h3>👤 Técnico Especialista</h3>
+            <p><strong>Stanly Avila Mojica</strong><br>Mecánico Especialista<br>Respeto • Confianza • Responsabilidad</p>
+        </div>
+    </div>
+</section>
+
+<!-- Pie de página -->
+<footer>
+    <p><strong>Camions B & B Inc</strong> — Servicio de confianza en Villeroy, Québec</p>
+    <p style="margin-top:0.5rem;">Servicio en Español 🇪🇸 • Francés 🇫🇷 • Inglés 🇬🇧</p>
+    <p style="margin-top:1rem; font-size:0.9rem;">© 2026 Camions B & B Inc — Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
